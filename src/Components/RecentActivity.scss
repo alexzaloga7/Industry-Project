@@ -125,6 +125,7 @@ body {
         height: 100%;
         padding: 1rem;
         padding-top: 2rem;
+        overflow-y: auto;
     }
 
     &__img {
@@ -177,6 +178,7 @@ body {
     &__req {
         display: flex;
         justify-content: flex-end;
+        margin: 1rem 0;
     }
 
     &__req-shape {
