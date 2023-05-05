@@ -20,7 +20,7 @@ function RecentActivity() {
     {
       sender: "chatbot",
       content:
-        "Hi Matthew, I’m your American Express AI assistant. How can I assist you today?",
+        "Hi Matthew! I’m am an AI language model designed to assist you. I'm here to eliminate wait times and improve satisfaction. How can I help you today?",
       timestamp: getCurrentTimestamp(),
     },
   ]);
