@@ -5,7 +5,10 @@
   background-color: $background-color;
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
 
   &__box {
     background-color: $element-background-color;

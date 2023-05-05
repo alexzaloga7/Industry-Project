@@ -143,6 +143,69 @@ function RecentActivity() {
                 </div>
               ))}
             </div>
+
+                <div className="ra__transaction-status">
+                    <p className="ra__transaction-status-text">Latest Transactions</p>
+                    <p className="ra__learn-more ra__link">Learn More</p>
+                </div>
+                <ul className="ra__transactions">
+                    <li className="ra__transaction"></li>
+                    <li className="ra__transaction"></li>
+                    <li className="ra__transaction"></li>
+                    <li className="ra__transaction"></li>
+                </ul>
+                </div>
+                <div className="ra__right">
+                    <div className="ra__top">
+                        <section className='add'>
+                            <p className="add__text">Get rewards for doing the things you love</p>
+                        </section>
+                        <section className="chatbot">
+            <div className="chatbot__header">
+              <p className="chatbot__header-text">Personal AI Assistant</p>
+              <span class="material-symbols-outlined chatbot__close">
+                close
+              </span>
+            </div>
+            <div className="chatbot__content">
+              {messages.map((message, index) => (
+                <div
+                  key={index}
+                  className={
+                    message.sender === "chatbot"
+                      ? "chatbot__res"
+                      : "chatbot__req"
+                  }
+                >
+                  {message.sender === "chatbot" ? (
+                    <img
+                      className="chatbot__img"
+                      src="https://www.shutterstock.com/image-vector/colorful-wolfs-head-on-black-600w-1690939516.jpg"
+                      alt="chatbot"
+                    />
+                  ) : (
+                    <img
+                      className="chatbot__img"
+                      src="https://www.shutterstock.com/image-vector/chihuahua-dog-abstract-neon-color-600w-1842098419.jpg"
+                      alt="chatbot"
+                    />
+                  )}
+                  <div className="chatbot__message">
+                    <p className="chatbot__timestamp">{message.timestamp}</p>
+                    <p className="chatbot__message-content">
+                      {message.content}
+                    </p>
+                    <div
+                      className={
+                        message.sender === "chatbot"
+                          ? "chatbot__res-shape"
+                          : "chatbot__req-shape"
+                      }
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
             <form className="chatbot__input" onSubmit={handleUserInputSubmit}>
               <span class="chatbot__icon material-symbols-outlined">
                 attach_file
@@ -156,13 +219,15 @@ function RecentActivity() {
               <span class="chatbot__icon material-symbols-outlined">mood</span>
             </form>
           </section>
-        </div>
-        <div className="ra__bottom">
-          <p className="ra__useful-links">Useful Links</p>
-        </div>
-      </div>
-    </section>
-  );
+                    </div>
+                    <div className="ra__bottom">
+                        <p className="ra__useful-links">Useful Links</p>
+                    </div>
+                </div>
+        </section>
+
+            
+          
 }
 
 export default RecentActivity;
