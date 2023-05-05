@@ -30,6 +30,9 @@ function RecentActivity() {
                 </div>
                 <div className="ra__right">
                     <div className="ra__top">
+                        <section className='add'>
+                            <p className="add__text">Get rewards for doing the things you love</p>
+                        </section>
                         <section className="chatbot">
                             <div className="chatbot__header">
                                 <p className="chatbot__header-text">Personal Assistant</p>
