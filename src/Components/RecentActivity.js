@@ -94,10 +94,31 @@ function RecentActivity() {
           <p className="ra__learn-more ra__link">Learn More</p>
         </div>
         <ul className="ra__transactions">
-          <li className="ra__transaction"></li>
-          <li className="ra__transaction"></li>
-          <li className="ra__transaction"></li>
-          <li className="ra__transaction"></li>
+          <div className="ra__wrapper">
+            <p className="ra__subheader-1">Date</p>
+            <p className="ra__subheader-2">Description</p>
+            <p className="ra__subheader-3">Amount</p>
+          </div>
+          <div className="ra__wrapper">
+            <li className="ra__transaction ra__transaction-1">5/4/23</li>
+            <li className="ra__transaction ra__transaction-2">Amazon.com</li>
+            <li className="ra__transaction ra__transaction-3"> $232.49</li>
+          </div>
+          <div className="ra__wrapper">
+            <li className="ra__transaction ra__transaction-1">5/3/23</li>
+            <li className="ra__transaction ra__transaction-2">BOB'SBARBECUE</li>
+            <li className="ra__transaction ra__transaction-3"> $45.07</li>
+          </div>
+          <div className="ra__wrapper">
+            <li className="ra__transaction ra__transaction-1">5/1/23</li>
+            <li className="ra__transaction ra__transaction-2">TIMHORTONS</li>
+            <li className="ra__transaction ra__transaction-3"> $10.50</li>
+          </div>
+          <div className="ra__wrapper">
+            <li className="ra__transaction ra__transaction-1">4/30/23</li>
+            <li className="ra__transaction ra__transaction-2">COSTCOSHOPPING</li>
+            <li className="ra__transaction ra__transaction-3"> $106.93</li>
+          </div>
         </ul>
       </div>
       <div className="ra__right">

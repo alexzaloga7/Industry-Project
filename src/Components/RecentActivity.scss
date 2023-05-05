@@ -1,237 +1,260 @@
-@use '../styles/partials/variables' as *;
-@use '../styles/partials/typography' as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/typography" as *;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .ra {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    background-color: white;
+    width: 70%;
+    margin-right: 1rem;
+  }
+
+  &__right {
+    width: 30%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading-text {
+    margin: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    color: $primary-cta-color;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__transaction-types {
+    display: flex;
+  }
+
+  &__type {
+    width: 50%;
+    background-color: $background-color;
+  }
+
+  &__type--chosen {
+    border-top: 5px solid $divider-color;
+    background-color: white;
+  }
+
+  &__type-text {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  &__transaction-status {
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
+  }
 
-    &__left {
-        background-color: white;
-        width: 70%;
-        margin-right: 1rem;
-    }
+  &__transactions {
+    list-style: none;
+    padding: 0 24px;
+  }
 
-    &__right {
-        width: 30%;
-        gap: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 0;
+    align-items: center;
+    border-top: 2px solid $background-color;
+  }
+  &__subheader-1 {
+    padding: 0 24px;
+    width: 10%;
+  }
 
-    &__heading-text {
-        margin: 1rem;
-        margin-bottom: 3rem;
-    }
+  &__subheader-2 {
+    width: 30%;
+  }
+  &__subheader-3 {
+    width: 10%;
+  }
+  &__transaction-1 {
+    padding: 0 24px;
+    width: 10%;
+  }
+  &__transaction-2 {
+    width: 30%;
+  }
 
-    &__link {
-        color: $primary-cta-color;
-        text-decoration: underline;
-        cursor: pointer;
-    }
+  &__transaction-3 {
+    width: 10%;
+  }
 
-    &__transaction-types {
-        display: flex;
-    }
 
-    &__type {
-        width: 50%;
-        background-color: $background-color;
-    }
+  &__top {
+    height: 295px;
+    background-color: #bebebe;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0.5rem;
+    position: relative;
+  }
 
-    &__type--chosen {
-        border-top: 5px solid $divider-color;
-        background-color: white;
-    }
-
-    &__type-text {
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-    }
-
-    &__transaction-status {
-        padding: 1.5rem;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__transactions {
-        list-style: none;
-    }
-
-    &__transaction {
-        border-top: 2px solid $background-color;
-        padding: 1rem;
-    }
-
-    &__top {
-        height: 295px;
-        background-color: #BEBEBE;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        border-radius: 0.5rem;
-        position: relative;
-    }
-
-    &__useful-links {
-        padding: 1rem;
-        background-color: white;
-    }
+  &__useful-links {
+    padding: 1rem;
+    background-color: white;
+  }
 }
 
 .chatbot {
-    height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+
+  &__header {
+    background-color: #2f6dc8;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
+    justify-content: space-between;
+  }
+
+  &__header-text {
+    color: white;
+  }
+
+  &__close {
+    color: white;
+  }
+
+  &__content {
+    background-color: white;
+    height: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    overflow-y: auto;
+  }
+
+  &__img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__res {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__message {
+    position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__message-content {
+    background-color: #f5f5f5;
+    flex-grow: 2;
+    padding: 5px 1rem;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  &__timestamp {
     position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    display: none;
-    
-    
+    top: -1rem;
+    left: 1rem;
+    font-size: 10px;
+    color: #abb0bc;
+    font-weight: 600;
+  }
 
-    &__header {
-        background-color: #2F6DC8;
-        border-top-left-radius: 0.5rem;
-        border-top-right-radius: 0.5rem;
-        padding: 1rem;
-        display: flex;
-        justify-content: space-between;
-    }
+  &__res-shape {
+    position: absolute;
+    left: -0.4rem;
+    background-color: #f5f5f5;
+    width: 1rem;
+    height: 1rem;
+    bottom: 0.5rem;
+    transform: rotate(45deg);
+  }
 
-    &__header-text {
-        color: white;
-    }
+  &__req {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
 
-    &__close {
-        color: white;
-    }
+  &__req-shape {
+    position: absolute;
+    right: -0.4rem;
+    background-color: #f5f5f5;
+    width: 1rem;
+    height: 1rem;
+    bottom: 0.5rem;
+    transform: rotate(45deg);
+  }
 
-    &__content {
-        background-color: white;
-        height: 100%;
-        padding: 1rem;
-        padding-top: 2rem;
-        overflow-y: auto;
-    }
+  &__input {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.3rem;
+    background-color: white;
+    border-top: 1px solid #d9d9d9;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
 
-    &__img {
-        width: 2rem;
-        height: 2rem;
-        border-radius: 50%;
-        background-size: cover;
-        background-position: center;
-    }
+  &__message-input {
+    width: 90%;
+    margin: 0 0.3rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    height: 1.5rem;
+    outline: none;
+    padding: 0 1rem;
+  }
 
-    &__res {
-        display: flex;
-        margin-bottom: 2rem;
-    }
-
-    &__message {
-        position: relative;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    &__message-content {
-        background-color: #f5f5f5;
-        flex-grow: 2;
-        padding: 5px 1rem;
-        border-radius: 10px;
-        font-size: 14px;
-        width: 100%;
-    }
-
-    &__timestamp {
-        position: absolute;
-        top: -1rem;
-        left: 1rem;
-        font-size: 10px;
-        color: #ABB0BC;
-        font-weight: 600;
-
-    }
-
-    &__res-shape {
-        position: absolute;
-        left: -0.4rem;
-        background-color: #f5f5f5;
-        width: 1rem;
-        height: 1rem;
-        bottom: 0.5rem;
-        transform: rotate(45deg);
-        
-    }
-
-    &__req {
-        display: flex;
-        justify-content: flex-end;
-        margin: 1rem 0;
-    }
-
-    &__req-shape {
-        position: absolute;
-        right: -0.4rem;
-        background-color: #f5f5f5;
-        width: 1rem;
-        height: 1rem;
-        bottom: 0.5rem;
-        transform: rotate(45deg);
-    }
-
-    &__input {
-        height: 4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 0.3rem;
-        background-color: white;
-        border-top: 1px solid #D9D9D9;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-    }
-
-    &__message-input{
-        width: 90%;
-        margin: 0 0.3rem;
-        border: 1px solid #D9D9D9;
-        border-radius: 10px;
-        height: 1.5rem;
-        outline: none;
-        padding: 0 1rem;
-    }
-
-    &__icon {
-        color: #D9D9D9;
-        font-size: 1.7rem;
-    }
+  &__icon {
+    color: #d9d9d9;
+    font-size: 1.7rem;
+  }
 }
 
 .add {
-    height: 100%;
-    width: 100%;
-    background-image: url('https://www.yeahlifestyle.com/wp-content/uploads/2022/05/What-You-Know-About-Benefits-of-American-Express-Gold-Card.jpg');
+  height: 100%;
+  width: 100%;
+  background-image: url("https://www.yeahlifestyle.com/wp-content/uploads/2022/05/What-You-Know-About-Benefits-of-American-Express-Gold-Card.jpg");
 
-    &__text {
-        color: white;
-        font-weight: bold;
-        padding: 1rem;
-        font-size: 2rem;
-        background-color: rgba(0, 0%, 0%, 0.2);
-
-    }
+  &__text {
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 2rem;
+    background-color: rgba(0, 0%, 0%, 0.2);
+  }
 }
