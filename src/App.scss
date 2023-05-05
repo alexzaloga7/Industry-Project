@@ -1,0 +1,16 @@
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
+
+// boxsizing
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// body styling
+
+.App {
+  font-family: "Titillium Web", Times, serif;
+}
