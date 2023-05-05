@@ -1,11 +1,11 @@
 import "./App.scss";
+import PaymentInfo from "./Components/PaymentInfo";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Industry Project</p>
-        <span class="material-symbols-outlined">home</span>
+        <PaymentInfo />
       </header>
     </div>
   );
