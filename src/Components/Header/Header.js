@@ -23,11 +23,11 @@ function Header() {
       </section>
       <nav className="nav">
         <div className="nav__wrapper">
-        <a className="nav__link nav__link--current">Home</a>
-        <a className="nav__link">Statement</a>
-        <a className="nav__link">Payments</a>
-        <a className="nav__link">Manage Accounts</a>
-        <a className="nav__link">Information</a>
+        <a href="#" className="nav__link nav__link--current">Home</a>
+        <a href="#" className="nav__link">Statement</a>
+        <a href="#" className="nav__link">Payments</a>
+        <a href="#" className="nav__link">Manage Accounts</a>
+        <a href="#" className="nav__link">Information</a>
         </div>
         <div className="nav__container">
         <img src={card} className="nav__img"></img>

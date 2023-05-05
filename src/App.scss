@@ -21,3 +21,13 @@ main {
 .App {
   font-family: "Titillium Web", Times, serif;
 }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  
+  &:hover{
+    text-decoration: underline;
+  }
+  
+}

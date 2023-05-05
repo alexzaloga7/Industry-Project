@@ -26,6 +26,7 @@
     border-radius: 4px;
     background-color: $primary-cta-color;
     color: $label-text-color;
+    cursor: pointer;
   }
   &__icon-menu {
     display: flex;
@@ -36,6 +37,7 @@
   }
   &__logo {
     height: 1.875rem;
+    cursor: pointer;
   }
   &__wrapper {
     width: 200px;
@@ -48,6 +50,7 @@
     color: $primary-cta-color;
     height: 34px;
     margin-top: 12px;
+    cursor: pointer;
   }
   &__link {
     color: $primary-cta-color;
