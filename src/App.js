@@ -1,5 +1,6 @@
 import "./App.scss";
 import PaymentInfo from "./Components/PaymentInfo";
+import RecentActivity from './Components/RecentActivity';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <header className="App-header">
         <PaymentInfo />
       </header>
+      <RecentActivity />
     </div>
   );
 }
