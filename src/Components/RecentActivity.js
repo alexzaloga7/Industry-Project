@@ -1,5 +1,18 @@
 import './RecentActivity.scss';
+import React, { useState, useEffect } from 'react';
+
+
 function RecentActivity() {
+    const [userInput, setUserInput] = useState('');
+    const [messages, setMessages] = useState([
+        {
+            sender: 'chatbot',
+            content: 'Chat help here',
+            timestamp: '12:08 AM',
+        },
+    ]);
+
+
     return <section className="ra">
         <div className="ra__left">
             <div className="ra__heading">
@@ -51,6 +64,14 @@ function RecentActivity() {
                                         <div className="chatbot__req-shape"></div>
                                     </div>
                                     <img className="chatbot__img" src="https://www.shutterstock.com/image-vector/chihuahua-dog-abstract-neon-color-600w-1842098419.jpg"/>
+                                </div>
+                                <div className="chatbot__res">
+                                    <img className="chatbot__img" src="https://www.shutterstock.com/image-vector/colorful-wolfs-head-on-black-600w-1690939516.jpg"/>
+                                    <div className="chatbot__message">
+                                        <p className="chatbot__timestamp">12:13 AM</p>
+                                        <p className="chatbot__message-content">Chat help here</p>
+                                        <div className="chatbot__res-shape"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="chatbot__input">
