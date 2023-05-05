@@ -1,5 +1,8 @@
 import "./RecentActivity.scss";
 import React, { useState, useEffect } from "react";
+import robot from "../assets/robot.png";
+import robotHead from "../assets/robot-head.png";
+import persona from "../assets/persona.jpg";
 
 function RecentActivity() {
   const getCurrentTimestamp = () => {
@@ -121,18 +124,8 @@ function RecentActivity() {
                       : "chatbot__req"
                   }
                 >
-                  {message.sender === "chatbot" ? (
-                    <img
-                      className="chatbot__img"
-                      src="https://www.shutterstock.com/image-vector/colorful-wolfs-head-on-black-600w-1690939516.jpg"
-                      alt="chatbot"
-                    />
-                  ) : (
-                    <img
-                      className="chatbot__img"
-                      src="https://www.shutterstock.com/image-vector/chihuahua-dog-abstract-neon-color-600w-1842098419.jpg"
-                      alt="chatbot"
-                    />
+                  {message.sender === "chatbot" && (
+                    <img className="chatbot__img" src={robot} alt="chatbot" />
                   )}
                   <div className="chatbot__message">
                     <p className="chatbot__timestamp">{message.timestamp}</p>
@@ -147,6 +140,9 @@ function RecentActivity() {
                       }
                     ></div>
                   </div>
+                  {message.sender !== "chatbot" && (
+                    <img className="chatbot__img" src={persona} alt="chatbot" />
+                  )}
                 </div>
               ))}
             </div>
