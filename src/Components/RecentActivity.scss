@@ -26,6 +26,7 @@ body {
     gap: 1rem;
     display: flex;
     flex-direction: column;
+    
   }
 
   &__heading-text {
@@ -127,7 +128,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
-//   display: none;
+  display: none;
 
   &__header {
     background-color: #2f6dc8;
@@ -249,12 +250,15 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("https://www.yeahlifestyle.com/wp-content/uploads/2022/05/What-You-Know-About-Benefits-of-American-Express-Gold-Card.jpg");
+  border-radius: 0.5rem;
 
   &__text {
     color: white;
     font-weight: bold;
     padding: 1rem;
     font-size: 2rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
     background-color: rgba(0, 0%, 0%, 0.2);
   }
 }
