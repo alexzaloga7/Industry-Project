@@ -31,6 +31,7 @@ function Header() {
         </div>
         <div className="nav__container">
         <img src={card} className="nav__img"></img>
+        <p className="nav__text">Matthew</p>
         </div>
       </nav>
     </header>
