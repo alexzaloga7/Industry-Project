@@ -1,2 +1,76 @@
 @use "../styles/partials/typography" as *;
 @use "../styles/partials/variables" as *;
+
+.Payment-Info {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+
+  &__box {
+    background-color: $element-background-color;
+    min-width: 40rem;
+    margin: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  }
+
+  &__boxtwo {
+    background-color: $element-background-color;
+    min-width: 40rem;
+    margin: 0.5rem;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  }
+
+  &__amount {
+    text-align: center;
+  }
+
+  &__textbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__button {
+    background-color: $primary-cta-color;
+    color: $element-background-color;
+    padding: 1rem;
+    width: 19rem;
+    border: none;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__button-container {
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  &__bold {
+    border-bottom: 1px solid $grey-divider-color;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+
+  &__large {
+    border-bottom: 1px solid $grey-divider-color;
+    text-align: center;
+    padding-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 0rem;
+  }
+
+  &__regular {
+    border-bottom: 1px solid $grey-divider-color;
+    text-align: center;
+    color: $primary-cta-color;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+  }
+}
